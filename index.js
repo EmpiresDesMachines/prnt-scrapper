@@ -56,6 +56,7 @@ const len = linksArray.length;
           () => document.querySelector('.no-click.screenshot-image').src,
         );
 
+        /* detect removed screen placeholder ??
         if (image.includes('https://st.prntscr.com/')) {
           console.log(`fail ${url}.png | ${i > 9 ? ' ' : ''}-/${len} | was removed`);
           linksArray[i] = generateHash();
@@ -63,12 +64,14 @@ const len = linksArray.length;
           continue;
         }
 
-        if (image === 'https://i.imgur.com/4TSqxsp.jpg') {
+        
+        if (image === '') { // detect empty screen placeholder ??
           console.log(`fail ${url}.png | ${i > 9 ? ' ' : ''}-/${len} | bad hash >> empty`);
           linksArray[i] = generateHash();
           i--;
           continue;
         }
+        */
 
         await download(image, `images/${url}.png`);
         console.log(`save ${url}.png | ${i + 1}/${len}`);
