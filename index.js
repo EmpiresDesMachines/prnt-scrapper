@@ -56,15 +56,14 @@ const len = linksArray.length;
           () => document.querySelector('.no-click.screenshot-image').src,
         );
 
-        /* detect removed screen placeholder ??
-        if (image.includes('https://st.prntscr.com/')) {
+        if (image.includes('st.prntscr.com')) {
           console.log(`fail ${url}.png | ${i > 9 ? ' ' : ''}-/${len} | was removed`);
           linksArray[i] = generateHash();
           i--;
           continue;
         }
 
-        
+        /*
         if (image === '') { // detect empty screen placeholder ??
           console.log(`fail ${url}.png | ${i > 9 ? ' ' : ''}-/${len} | bad hash >> empty`);
           linksArray[i] = generateHash();
