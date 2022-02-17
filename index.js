@@ -74,8 +74,8 @@ const len = linksArray.length;
         console.log(`save ${url}.png | ${i + 1}/${len}`);
       } catch (error) {
         // console.log(error);
-        linksArray[i] = generateHash();
         console.log(`fail ${url}.png | ${i > 9 ? ' ' : ''}-/${len} | download failed`);
+        linksArray[i] = generateHash();
         i--;
       }
     }
